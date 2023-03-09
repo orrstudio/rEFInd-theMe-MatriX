@@ -11,12 +11,25 @@ On the default theme we roll our icons, fonts and add background picture.
 
 ## Installation
 
-1. Find the rEFInd directory on your boot volume. For me, it's `/boot/EFI/refind`.
-   (Note: you will likely need to do this as root)
+1. Find the boot directory on your boot volume. For me, it's "/boot". And delete all files in to boot directory. (Do so with care at your own risk. If you don't know what you're doing, it's best not to.)
 
-2. Copy theme files to the same directories inside the rEFInd directory. (Overwrite (refind.conf file) when copying, if needed. Do so with care at your own risk. This will erase your old refind.conf file. If you don't know what you're doing, it's best not to.)
+2. Copy all files from "boot" folder to the same directory inside the boot directory.
 
-3. I configured two systems in my refind.conf file: Arch Linux and Windows 8.1 (If you want, you can change it to your liking.)
+3. I configured two systems in my refind.conf file: Arch Linux and Windows 10 (If you want, you can change it to your liking.)
+
+4. Ready! Enjoy...
+
+## Description of the list of files in the "/boot" directory:
+
+ - "EFI" - folder for bios Boot folder and rEFInd configuration files.
+ - "BCD" - Windows 10 loader
+ - "bootmgfw.efi" - Windows 10 boot loader
+ - "initramfs-linux.img" - Linux RAM disk (a temporary root file system to mount its real root file system.)
+ - "initramfs-linux-fallback.img" - Linux RAM disk fallback
+ - "vmlinuz-linux" - Linux kernel
+ - "/boot/EFI/Boot/bootx64.efi" - Renamed from rEFInd.efi
+ - "/boot/EFI/Boot/refind.conf" - rEFInd config file
+ - "/boot/EFI/Boot/icons/" - folder for icons, background pict, fonts and other.
 
 ## Additional Info
 
